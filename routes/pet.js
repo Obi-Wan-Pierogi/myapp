@@ -10,7 +10,8 @@ const pets = [
         name: 'Fluffy',
         breed: 'Siamese',
         type: 'cat',
-        notes: [
+        notes:
+        [
             'Fluffy loves to have her belly rubbed',
             'Fluffy is really grumpy around other cats'
         ]
@@ -20,7 +21,8 @@ const pets = [
         name: 'Fido',
         breed: 'Beagle',
         type: 'dog',
-        notes: [
+        notes:
+        [
             'Fido loves to be scratched behind the ears',
             'Fido is really happy around other dogs'
         ]
@@ -30,7 +32,8 @@ const pets = [
         name: 'Goldberg',
         breed: 'Goldfish',
         type: 'fish',
-        notes: [
+        notes:
+        [
             'Goldberg loves to swim around',
             'Goldberg is eats alot'
         ]
@@ -50,13 +53,14 @@ router.get('/', (req, res) => {
 // GET: read a single pet
 router.get('/:id', (req, res) => { 
     //get a single pet
-
+    res.statusCode = 200;
+    res.json(pets[0]);
 });
 
 // POST: create a new pet
 router.post('/', (req, res) => { 
-    //create a new pet
-
+    res.statusCode = 501;
+    res.json({});
 });
 
 // PUT: update a single pet
